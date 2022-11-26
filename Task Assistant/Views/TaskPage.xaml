@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Task_Assistant.Views.TaskPage"
+             Title="TaskPage">
+    <VerticalStackLayout>
+        <Editor x:Name="TitleEditor"
+                Placeholder="Title"
+                Text="{Binding Title}"
+                HeightRequest="50"
+                FontSize="32"
+                Margin="5" />
+        <Editor x:Name="DescriptionEditor"
+                Placeholder="Description"
+                Text="{Binding Description}"
+                HeightRequest="150" 
+                FontSize="24"
+                Margin="5" />
+               
+        <Grid ColumnDefinitions="Auto,2*,*,*,*" ColumnSpacing="4">
+            <Label Grid.Column="0"
+                   Text="Due Date"
+                   FontSize="28" />
+            <VerticalStackLayout Grid.Column="1">
+                <TimePicker x:Name="DueTimeEditor"
+                       Time="{Binding DueTime}" />
+                <DatePicker x:Name="DueDateEditor"
+                        Date="{Binding DueDate}" />
+            </VerticalStackLayout>
+            <Button Grid.Column="2"
+                    Text="Save"
+                    Clicked="SaveTask_Clicked"/>
+            <Button Grid.Column="3"
+                    Text="Completed"
+                    Clicked="CompletedTask_Clicked" />
+            <Button Grid.Column="4"
+                    Text="Archive"
+                    Clicked="ArchiveTask_Clicked" />
+        </Grid>
+        <Label x:Name="ID_Label" 
+                Text="{Binding Descriptive_ID}"
+               FontSize="11" />
+
+    </VerticalStackLayout>
+</ContentPage>

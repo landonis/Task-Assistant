@@ -1,0 +1,17 @@
+﻿TODO 
+
+Layout taskpage
+formatting
+notes
+View Archived/completed tasks (maybe use a bottom nav bar?)
+Add a function to make tasks with steps/multiple instructions
+Add a Library function to a task to attach links/files/notes
+Add Timestamps to task creation and editing
+
+
+CANDO
+
+Create a task that will persist between sessions
+Add a time and date to show when the task is due
+Add a title and/or description to tasks
+mark tasks as Archived or Completed
